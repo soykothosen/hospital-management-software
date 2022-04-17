@@ -141,7 +141,7 @@ public class login extends javax.swing.JFrame {
              
         try {
             Class.forName("com.mysql.jdbc.Driver");
-             con = DriverManager.getConnection("jdbc:mysql://localhost/loyal","root","");
+             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loyal?zeroDateTimeBehavior=CONVERT_TO_NULL","root","");
             
             pst = con.prepareStatement("select * from user where username =? and password =? and utype = ?");
             
